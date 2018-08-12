@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NEX
+Comment=NEX P2P Cryptocurrency
+Exec=nex-qt %u
+Terminal=false
+Type=Application
+Icon=nex128
+MimeType=x-scheme-handler/nex;
+Categories=Office;Finance;
+Name[en_US]=nex-qt.desktop.desktop.desktop

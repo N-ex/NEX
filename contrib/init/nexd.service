@@ -1,0 +1,26 @@
+[Unit]
+Description=NEX's distributed currency daemon
+After=network.target
+
+[Service]
+User=nex
+Group=nex
+
+Type=forking
+PIDFile=/var/lib/nexd/nexd.pid
+
+ExecStart=/usr/bin/nexd -daemon -pid=/var/lib/nexd/nexd.pid \
+          -conf=/etc/nex/nex.conf -datadir=/var/lib/nexd
+
+ExecStop=-/usr/bin/nex-cli -conf=/etc/nex/nex.conf \
+         -datadir=/var/lib/nexd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

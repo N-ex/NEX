@@ -1,0 +1,26 @@
+# /etc/conf.d/nexd: config file for /etc/init.d/nexd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/nex/nex.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/nexd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/nexd.pid"
+
+# Where to write nexd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/nexd"
+
+# User and group to own nexd process
+#BITCOIND_USER="nex"
+#BITCOIND_GROUP="nex"
+
+# Path to nexd executable
+#BITCOIND_BIN="/usr/bin/nexd"
+
+# Nice value to run nexd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
